@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.container {
+    width: 400px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.password-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+#password {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #007bff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: #0056b3;
+}
+
+.settings {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 5px 0;
+}
+
+.setting:last-child {
+    margin-bottom: 0;
+}
+
+.setting label {
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.setting input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Styling untuk checkbox */
+.setting input[type="checkbox"] {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #e0e0e0;
+    border-radius: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.setting input[type="checkbox"]:checked {
+    background: #007bff;
+}
+
+.setting input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    transition: .5s;
+}
+
+.setting input[type="checkbox"]:checked::before {
+    left: 22px;
+}
+
+.generate-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+}
+
+.generate-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,123,255,0.3);
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+}
+
+/* Animasi untuk tooltip */
+.copy-btn .tooltip {
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    bottom: 130%;
+}
+
+.copy-btn.success {
+    background: #28a745;
+}
+
+.footer {
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.footer i {
+    color: #ff4b4b;
+    margin: 0 4px;
+    font-size: 0.9rem;
+    animation: heartBeat 1.5s ease infinite;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0056b3;
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
